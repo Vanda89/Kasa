@@ -1,9 +1,18 @@
+import housingData from '../../data/housing.json';
+import Hero from '../../components/Hero';
+import HousingThumbnails from '../../components/HousingThumbnails';
+import homeHeroBg from '../../assets/background/home_hero_bg.jpg';
+
 function Home() {
   return (
     <div>
-      <h1>Kasa</h1>
+      <Hero
+        text="Chez vous, partout et ailleurs"
+        backgroundImage={homeHeroBg}
+      />
+      <HousingThumbnails data={housingData} />
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
