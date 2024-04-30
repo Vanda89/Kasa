@@ -1,4 +1,4 @@
-const SvgStar = (props) => (
+export const StarIcon = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={36}
@@ -12,4 +12,3 @@ const SvgStar = (props) => (
     />
   </svg>
 );
-export default SvgStar;

@@ -9,8 +9,8 @@ function Housing() {
   const housingDetails = housingData.find((item) => item.id === id);
 
   return (
-    <div>
-      <Slideshow data={housingData} />
+    <div className="mx-5 md:mx-12 lg:mx-24">
+      <Slideshow data={housingDetails.pictures} />
       <HousingCard data={housingDetails} />
     </div>
   );
