@@ -43,32 +43,28 @@ function HousingCard({ data }) {
 
           <div className="flex items-center justify-start md:justify-end ml-1 md:mr-1">
             {[...Array(starCount)].map((_, index) => (
-              <>
+              <div key={index}>
                 <StarXsIcon
-                  key={index}
                   className="md:hidden text-red-400"
                   alt="icône d'étoile rouge représentant la note de l'hébergement"
                 />
                 <StarIcon
-                  key={index}
                   className="hidden md:block text-red-400"
                   alt="icône d'étoile rouge représentant la note de l'hébergement"
                 />
-              </>
+              </div>
             ))}
             {[...Array(grayStarCount)].map((_, index) => (
-              <>
+              <div key={index}>
                 <StarXsIcon
-                  key={index}
                   className="md:hidden text-neutral-400"
                   alt="icône d'étoile grise représentant la note de l'hébergement"
                 />
                 <StarIcon
-                  key={index}
                   className="hidden md:block text-neutral-400"
                   alt="icône d'étoile grise représentant la note de l'hébergement"
                 />
-              </>
+              </div>
             ))}
           </div>
         </div>

@@ -11,7 +11,7 @@ function Header() {
         </Link>
       </div>
       <nav className="flex md:w-72 w-1/2 text-xs md:text-2xl uppercase md:capitalize">
-        <ul className="flex justify-between w-full">
+        <ul className="flex flex-col items-center gap-2.5 xs:flex-row xs:gap-0 xs:justify-between w-full ">
           <li className="md:ml-8">
             <Link to={ROUTES.HOME}>Accueil</Link>
           </li>
