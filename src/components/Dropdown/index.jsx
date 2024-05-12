@@ -1,8 +1,9 @@
 import arrow from '../../assets/icons/arrow.png';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import './Dropdown.scss';
 
-function Dropdown({ title, content, fontSize, width }) {
+function Dropdown({ title, content }) {
   const [active, setActive] = useState(false);
 
   const handleToggle = () => {
@@ -10,30 +11,31 @@ function Dropdown({ title, content, fontSize, width }) {
   };
 
   return (
-    <div
-      className={`dropdown ${active ? 'active' : ''} ${width} flex flex-col justify-center `}
-    >
-      <div
-        className={`dropdown-title relative  bg-red-400 w-full pl-3 lg:pl-4 py-2 lg:py-4 rounded-lg text-white text-left font-bold cursor-pointer ${fontSize}`}
-        onClick={handleToggle}
-      >
+    <div className={`dropdown ${active ? 'dropdown--active' : ''}`}>
+      <div className="dropdown__title" onClick={handleToggle}>
         {title}
         <span
-          className={`absolute right-4 transform ${active ? 'rotate-180 top-1.5 md:top-1/4 ' : 'rotate-0 top-1 md:top-1/4 '}`}
+          className={`dropdown__title-icon ${active ? 'dropdown__title-icon--active' : ''}`}
         >
-          <img src={arrow} className="h-6 lg:h-auto" alt="Arrow Icon" />
+          <img
+            src={arrow}
+            className="dropdown__title-icon__image"
+            alt="Icône en forme de flèche"
+          />
         </span>
       </div>
       {active && (
-        <div className="dropdown-content transition-all duration-200 ease-in-out transform origin-top scale-100 text-xs md:text-lg p-4 bg-grey-50 rounded-b-lg">
+        <div className="dropdown__content">
           {Array.isArray(content) ? (
-            <ul>
+            <ul className="dropdown__content-list">
               {content.map((item, index) => (
-                <li key={index}>{item}</li>
+                <li key={index} className="dropdown__content-list__item">
+                  {item}
+                </li>
               ))}
             </ul>
           ) : (
-            <p>{content}</p>
+            <p className="dropdown__content-text">{content}</p>
           )}
         </div>
       )}
@@ -44,8 +46,6 @@ function Dropdown({ title, content, fontSize, width }) {
 Dropdown.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.oneOfType([PropTypes.string, PropTypes.array]).isRequired,
-  fontSize: PropTypes.string,
-  width: PropTypes.string,
 };
 
 export default Dropdown;

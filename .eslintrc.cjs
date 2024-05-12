@@ -18,12 +18,13 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
-    'prettier/prettier': 'error',
-    "no-unused-vars": "warn",
-    "no-console": "warn",
-    "prefer-const": "warn",
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "react/prop-types": "warn",
+    'prettier/prettier': ['error', { endOfLine: 'auto' }],
+    'no-unused-vars': 'warn',
+    'no-console': 'warn',
+    'prefer-const': 'warn',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
+    'react/prop-types': 'warn',
   },
-}
+};
+

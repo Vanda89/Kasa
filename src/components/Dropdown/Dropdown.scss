@@ -1,0 +1,84 @@
+@import "../../styles/variables.scss";
+
+.dropdown {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+
+  &__title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: auto;
+    background-color: #f87171;
+    padding-left: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.4rem;
+    color: $base-light-color;
+    text-align: left;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: $size-s;
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: $size-m;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      padding-left: 1rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    &-icon {
+      position: absolute;
+      right: 1rem;
+      transform: rotate(0);
+      height: 1.5rem;
+
+      @media (min-width: $breakpoint-tablet) {
+        height: 2rem;
+      }
+
+      &--active {
+        transform: rotate(180deg);
+      }
+
+      &__image {
+        height: 100%;
+      }
+    }
+  }
+
+  &__content {
+    transition: all 0.2s ease-in-out;
+    transform-origin: top;
+    height: auto;
+    font-size: $size-xs;
+    padding: 1.25rem;
+    background-color: $bg-base-color;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: $size-base;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      font-size: $size-m;
+    }
+
+    &-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    &-text {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}

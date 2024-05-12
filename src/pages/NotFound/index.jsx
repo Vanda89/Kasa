@@ -1,23 +1,19 @@
 import { Link } from 'react-router-dom';
 import { ROUTES } from '../../const';
+import './NotFound.scss';
 
 function NotFound() {
   return (
-    <div className="flex flex-col items-center gap-28 mb-28">
-      <p className=" text-8xl md:text-9xl lg:text-72 text-red-400 font-bold leading-none mt-20 md:mt-12">
-        404
-      </p>
-      <p className="text-lg md:text-2xl lg:text-4xl text-center text-red-400">
+    <div className="not-found">
+      <p className="not-found__error-code">404</p>
+      <p className="not-found__message">
         Oups! La page que
-        <span className="lg:inline block">
+        <span className="not-found__message--block">
           {' '}
           vous demandez n&apos;existe pas.
         </span>
       </p>
-      <Link
-        to={ROUTES.HOME}
-        className="underline text-sm md:text-lg font-medium"
-      >
+      <Link to={ROUTES.HOME} className="not-found__link">
         Retourner sur la page d&apos;accueil
       </Link>
     </div>

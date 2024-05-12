@@ -5,7 +5,7 @@ import homeHeroBg from '../../assets/background/home_hero_bg.jpg';
 
 function Home() {
   return (
-    <div>
+    <div className="home">
       <Hero
         text="Chez vous, partout et ailleurs"
         backgroundImage={homeHeroBg}

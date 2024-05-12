@@ -1,0 +1,13 @@
+@import "../../styles/variables.scss";
+
+.housing {
+  margin: 1.25rem;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin: 3rem;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin: 3rem 6rem;
+  }
+}

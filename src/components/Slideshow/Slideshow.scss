@@ -1,0 +1,86 @@
+@import "../../styles/variables.scss";
+
+.slideshow {
+  position: relative;
+  height: 16rem;
+  display: flex;
+
+  @media (min-width: $breakpoint-tablet) {
+    height: 26rem;
+  }
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    border: none;
+    background-color: transparent;
+
+    @media (min-width: $breakpoint-tablet) {
+      top: 10rem;
+    }
+
+    &--prev {
+      left: 0.25rem;
+
+      @media (min-width: $breakpoint-tablet) {
+        left: 0;
+      }
+    }
+
+    &--next {
+      right: 0.25rem;
+
+      @media (min-width: $breakpoint-tablet) {
+        right: 0;
+      }
+    }
+    &--hidden {
+      display: none;
+    }
+
+    &--visible {
+      display: block;
+    }
+  }
+
+  &__button-icon {
+    height: 1.5rem;
+
+    @media (min-width: $breakpoint-tablet) {
+      height: 6rem;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      height: auto;
+    }
+  }
+
+  &__picture {
+    height: 100%;
+    border-radius: 1.5rem;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__counter {
+    position: absolute;
+    left: 50%;
+    color: $base-light-color;
+    font-size: $size-s;
+    bottom: 0.25rem;
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: $size-m;
+      bottom: 2rem;
+    }
+
+    &--hidden {
+      display: none;
+    }
+
+    &--visible {
+      display: block;
+    }
+  }
+}

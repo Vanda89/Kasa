@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import arrowPrev from '../../assets/icons/arrow_prev.png';
 import arrowForward from '../../assets/icons/arrow_forward.png';
 import { useState } from 'react';
+import './Slideshow.scss';
 
 function Slideshow({ data }) {
   const [currentPicture, setCurrentPicture] = useState(0);
@@ -17,40 +18,40 @@ function Slideshow({ data }) {
   const totalPictures = data.length;
 
   return (
-    <div className="relative h-64 md:h-104 flex">
+    <section className="slideshow">
       {
         <button
           onClick={handlePrevious}
-          className={`absolute left-1 md:left-0 top-1/2 md:top-40 z-10 ${data.length <= 1 ? 'hidden' : 'block'}`}
+          className={`slideshow__button slideshow__button--prev ${data.length <= 1 ? 'slideshow__button--hidden' : 'slideshow__button--block'}`}
         >
           <img
             src={arrowPrev}
             alt="Flèche tournée vers la gauche"
-            className="h-6 md:h-auto"
+            className="slideshow__button-icon"
           />
         </button>
       }
       <img
         src={data[currentPicture]}
         alt="Housing"
-        className="h-full rounded-3xl w-full object-cover"
+        className="slideshow__picture"
       />
       {
         <button
           onClick={handleNext}
-          className={`absolute right-1 md:right-0 top-1/2 md:top-40 z-10 ${data.length <= 1 ? 'hidden' : 'block'}`}
+          className={`slideshow__button slideshow__button--next ${data.length <= 1 ? 'slideshow__button--hidden' : 'slideshow__button--block'}`}
         >
           <img
             src={arrowForward}
             alt="Flèche tournée vers la droite"
-            className="h-6 md:h-auto"
+            className="slideshow__button-icon"
           />
         </button>
       }
       <span
-        className={`absolute left-1/2 text-white text-sm md:text-lg bottom-1 md:bottom-8 ${data.length <= 1 ? 'hidden' : 'block'}`}
+        className={`slideshow__counter ${data.length <= 1 ? 'slideshow__counter--hidden' : 'slideshow__counter--block'}`}
       >{`${currentPicture + 1} / ${totalPictures}`}</span>
-    </div>
+    </section>
   );
 }
 

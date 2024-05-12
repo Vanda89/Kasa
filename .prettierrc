@@ -1,7 +1,16 @@
 {
+  "semi": true,
   "singleQuote": true,
-  "parser": "flow",
-  "endOfLine": "auto",
+  "trailingComma": "all",
   "printWidth": 80,
-  "trailingComma": "all"
+  "tabWidth": 2,
+  "endOfLine": "crlf",
+  "overrides": [
+    {
+      "files": "*.scss",
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
 }

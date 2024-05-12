@@ -1,0 +1,63 @@
+@import "../../styles/variables.scss";
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8rem;
+  margin-top: 5rem;
+  margin-bottom: 7rem;
+
+  p {
+    margin: 0;
+  }
+
+  &__error-code {
+    font-size: $size-3xl;
+    color: $primary-color;
+    font-weight: bold;
+    line-height: 1;
+    margin-top: 5rem;
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: $size-4xl;
+      margin-top: 3rem;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      font-size: $size-5xl;
+    }
+  }
+
+  &__message {
+    font-size: 1.125rem;
+    text-align: center;
+    color: $primary-color;
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 1.5rem;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      font-size: 2.25rem;
+    }
+
+    &--block {
+      display: block;
+
+      @media (min-width: $breakpoint-desktop) {
+        display: inline;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: underline;
+    font-size: 0.875rem;
+    color: $base-color;
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 1.125rem;
+    }
+  }
+}
