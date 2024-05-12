@@ -69,10 +69,12 @@
     color: $base-light-color;
     font-size: $size-s;
     bottom: 0.25rem;
+    display: none;
 
     @media (min-width: $breakpoint-tablet) {
       font-size: $size-m;
       bottom: 2rem;
+      display: block;
     }
 
     &--hidden {
