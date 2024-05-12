@@ -1,5 +1,5 @@
-import { StarIcon } from '../Icons/StarIcon';
-import { StarXsIcon } from '../Icons/StarXSIcon';
+import { StarIcon } from '../icons/StarIcon';
+import { StarXsIcon } from '../icons/StarXSIcon';
 import Dropdown from '../../components/Dropdown';
 import PropTypes from 'prop-types';
 import './HousingCard.scss';
