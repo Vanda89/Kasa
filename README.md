@@ -1,21 +1,64 @@
 
-# Kasa
+# Projet Bootcamp Kasa : Refonte d'une application Web avec React et React Router
 
-Kasa est une plateforme de location d'appartements entre particuliers. Avec plus de 500 annonces postées chaque jour, Kasa fait partie des leaders de la location d'appartements entre particuliers en France.
+## Contexte
+Kasa est une entreprise de location d’appartements entre particuliers, active depuis près de 10 ans. La plateforme existante, développée en ASP.NET, nécessite une refonte totale pour s’adapter aux nouvelles technologies et améliorer l’expérience utilisateur.
 
-Ce projet est une refonte totale du site de Kasa, passant d'une stack ASP.NET à une stack complète en JavaScript avec React côté front-end. Les maquettes ont été fournies par le designer de Kasa et l'objectif est de développer l'application en suivant ces maquettes et les directives fournies.
+<img src="/src/assets/background/housing_bg.jpg" />
 
-## Objectif du projet
+### Objectifs du Projet
+- **Refonte complète du site en React** : passer d'une stack legacy en ASP.NET à une stack moderne JavaScript avec React pour le front-end et Node.js pour le back-end (recrutement du développeur back-end en cours).
+- **Création de composants réactifs** : développer les composants en suivant les maquettes Figma fournies par le designer.
 
-L'objectif de ce projet est de démarrer le projet React et de développer l'ensemble de l'application, les composants React, les routes React Router, en suivant les maquettes Figma à l'adresse : https://www.figma.com/design/2BZEoBhyxt5IwZgRn0wGsL/Kasa_FR?node-id=0-1&t=6d4wNoIR69v7TvxS-0
+## Contraintes Techniques
+- Utilisation de **Create React App** ou **Vite** pour le bundling.
+- Suivi des **coding guidelines** internes à Kasa.
+- Utilisation des **20 dernières annonces de logements** fournies dans un fichier JSON pour simuler les données back-end.
+- **Maquettes responsives** fournies sur Figma avec tous les assets et composants nécessaires.
 
-## Données
+## Fonctionnalités Clés
 
-Le recrutement de la personne en charge du back-end n'est pas terminé et va prendre plus de temps que prévu. Du coup, il va falloir que tu fasses sans pour le moment. Je t'ai extrait les 20 dernières annonces de logements dans ce fichier JSON pour que tu puisses construire le Front qui correspond.
+### Galerie d’Images
+- Afficher une galerie pour chaque annonce.
+- Fonction de défilement circulaire : 
+  - Si l'utilisateur clique sur "Image suivante" à la dernière image, retourner à la première image.
+  - Si l'utilisateur clique sur "Image précédente" à la première image, afficher la dernière image.
+- Cacher les boutons "Suivant" et "Précédent" s'il n'y a qu'une seule image.
+- Garder la hauteur constante de la galerie, les images sont centrées et coupées si nécessaire.
+
+### Composant Collapse
+- À l’ouverture de la page, tous les collapses doivent être fermés.
+- Chaque clic sur un collapse :
+  - S’il est fermé, l’ouvre.
+  - S’il est ouvert, le ferme.
+
+## Design
+- **Maquettes Figma** [Lien](https://drive.google.com/file/d/18S-WR7XMTb6rTkpXTOdaiu7uKObRB4sK/view?usp=drive_link).
+- **Prototypes des animations des menus déroulants (Collapse) et des galeries d’images** [Lien](https://drive.google.com/drive/folders/1Nb_H7XDZZLN1-nL3Y_AV2io9a_V75TaA?usp=drive_link).
+- **Design responsive** : adapté pour toutes les tailles d’écran (desktop et mobile).
+- Les composants du site suivent une **logique de composants Figma** pour faciliter la construction en React.
+
+## Roadmap et Organisation
+1. **Installation et Initialisation** :
+   - Mise en place de l’environnement avec Create React App ou Vite.
+   - Installation des dépendances (React Router, gestion des states, etc.).
+   
+2. **Développement des Composants** :
+   - Développer les composants de base (Gallery, Collapse, etc.).
+   - Intégration des maquettes Figma avec les assets graphiques.
+   
+3. **Gestion des Routes** :
+   - Implémenter le routing avec React Router pour naviguer entre les pages d’annonces.
+   
+4. **Tests et Debugging** :
+   - Tester la navigation, les composants dynamiques, et l’affichage des annonces à partir du fichier JSON.
+   
+5. **Présentation et Livraison** :
+   - Préparer la présentation du projet à l'équipe avec les fonctionnalités clés et le design finalisé.
 
 ## Installation
 
-1. Clonez ce dépôt : `git clone https://github.com/username/kasa.git`
+1. Clonez ce dépôt : `git clone https://github.com/Vanda89/Kasa.git`
 2. Installez les dépendances : `npm install`
 3. Lancez le serveur : `npm start`
 
